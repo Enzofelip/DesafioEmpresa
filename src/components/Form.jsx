@@ -1,5 +1,6 @@
 import {FaRegTrashAlt} from "react-icons/fa"
-import { useState } from "react"
+import { useState } from "react";
+import "./Form.css";
 import {useForm} from "react-hook-form"
 import * as yup from "yup"
 import {yupResolver} from "@hookform/resolvers/yup"
@@ -12,7 +13,8 @@ const Form = (props) => {
     const [text, setText] = useState();
     const [menssage, setMenssage] = useState();
 
-    ;
+    
+    
     const descarte = () => {
       setText("");
       setMenssage("");
@@ -26,7 +28,8 @@ const Form = (props) => {
 
     return(
         <div className="form">
-        <form onSubmit={(e) =>  {
+          
+        < form  onSubmit={(e) =>  {
           onSave( text,menssage, e);
           setText("");
           setMenssage("");
@@ -73,7 +76,7 @@ const Form = (props) => {
             {text && menssage && props.imag ?(
               <button style={{background:"green"}} type="submit">Publicar</button>
             ): (
-              <button type="submit">Publicar</button>
+              <button type="submit" disabled >Publicar</button>
             )}
            
           </div>

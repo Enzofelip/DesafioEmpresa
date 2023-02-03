@@ -1,4 +1,5 @@
-import {FaBreadSlice, FaRegTimesCircle} from "react-icons/fa"
+import {FaBreadSlice, FaRegTimesCircle} from "react-icons/fa";
+import "./Publicando.css"
 
 const Publicando = ({tasks, deletar, imag}) => {
     

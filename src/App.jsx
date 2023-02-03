@@ -12,6 +12,9 @@ function App() {
   const [tasks, setTask] = useState([]);
   const [imag, setImag] = useState();
 
+  {imag && (
+    <h1>Vai dar certo!!</h1>
+  )}
   const addTasks = (valor,menssage, e) =>{
     e.preventDefault();
 
@@ -63,7 +66,7 @@ function App() {
         <p>WEP CHALENGE</p>
       </header>
       
-      <Form onSave={addTasks} logo={Logo} carroselImagem={carroselImagem} imag={imag} setImag={setImag}/>
+      <Form onSave={addTasks} logo={Logo} carroselImagem={carroselImagem} imag={imag} setImag={setImag} setTask={setTask} tasks={tasks}/>
       <Publicando tasks={tasks} deletar={deletar} imag={imag}/>
 
     </div>
